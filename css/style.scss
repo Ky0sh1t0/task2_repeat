@@ -1,0 +1,587 @@
+//sass --watch css/style.scss:css/style.css
+
+// variables
+$tablet: 991px;
+$phone: 767px;
+
+$text-resizer: 1200px;
+
+
+// styles
+@font-face {
+    font-family: 'TTSFirsNeue';
+    src: url("../fonts/TTFirsNeue-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTSFirsNeue';
+    src: url("../fonts/TTFirsNeue-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTSFrisNeue';
+    src: url("../fonts/TTFirsNeue-DemiBold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+html {
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'TTSFirsNeue';
+    font-size: 1.6rem;
+    padding: 0;
+
+    @media (max-width: $tablet) {
+        font-size: 1.4rem;
+    }
+
+    @media (max-width: $phone) {
+        font-size: 1.2rem;
+    }
+}
+
+h1, h2, h3 {
+    font-weight: 500;
+}
+
+// sizes of containers and e.t.c
+
+body {
+    background: url('../images/backgorund.png') no-repeat;
+    background-size: 100% 75rem;
+
+    @media (max-width: $tablet) {
+        background-size: 100% 65rem; 
+    }
+
+    @media (max-width: $phone) {
+        background-size: 100% 55rem; 
+    }
+}
+
+.tm-width {
+    max-width: 1440px;
+    padding: 0 10rem;
+    min-width: 320px;
+    margin-inline: auto;
+
+    @media (max-width: $tablet) {
+        max-width: 768px;
+        padding:  0 3.2rem;
+    }
+
+    @media (max-width: $phone) {
+        max-width: 500px;
+        padding: 0 0.8rem;
+    }
+}
+
+
+//mb-1 = 1rem
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-6 {
+    margin-bottom: 6rem;
+}
+
+//global class styles
+.underline {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    @media (max-width: $phone) {
+        margin-bottom: 1rem;
+    }
+}
+
+.devider {
+    background-color:rgba(255,255,255,0.2);
+    width: 1px;
+    height: 1.2rem;
+    align-self: center;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+    line-height: 1.42;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 2.3rem;
+    font-size: 1.4rem;
+
+    @media (max-width: $tablet) {
+        font-size: 1.2rem;
+        padding: 0.6rem 1.2rem;
+        line-height: 1.5;
+    }
+}
+
+.menu-item {
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+    font-size: 1.4rem;
+    margin-right: 2.4rem;
+    line-height: 1.43;
+}
+
+
+.btn-blue {
+    display: inline-flex;
+    text-decoration: none;
+    padding: 16px 24px;
+    border: 1px solid rgba(19, 139, 225, 0.4);
+    border-radius: 12px;
+    color: rgba(19, 139, 225, 1);
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.global-tag-line {
+    max-width: fit-content;
+    border-radius: 0.8rem;
+    background-color: rgba(19, 139, 225, 0.18);
+    color: rgba(19, 139, 225, 1);
+    padding: 0.8rem 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 2.4rem;
+
+
+    @media (max-width: $tablet) {
+        font-size: 1.2rem;
+        margin-bottom: 1.6rem;
+    }
+}
+
+
+.icon {
+    box-sizing: content-box;
+    height: 24px;
+    width: 24px;
+    border: 1rem solid rgba(0, 153, 255, 0.18);
+    border-radius: 1rem;
+    margin-bottom: 2.4rem;
+    
+    img {
+        background-color: rgba(0, 153, 255, 0.18);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
+// things starting here
+
+
+//header`s
+
+.header-cont1 {
+    display: flex;
+    align-items: center;
+    
+
+    .logo-holder {
+        margin-right: 2rem;
+
+        .logo-dt-tb {
+            width: 100%;
+            height: 100%;
+        }
+
+        .logo-ph {
+            display: none;
+        }
+
+    }
+
+
+    .tab {
+        display: flex;
+        gap: 2rem;
+
+        input[type=radio] {
+            display: none;
+            
+            &:checked + label {
+                position: relative;
+                font-weight: 500;
+                color: rgba(255,255,255, 1);
+                
+                &::before {
+                    content: "___";
+                    position:absolute;
+                    bottom: -0.5rem;
+                    left: 50%;
+                }
+            }
+            
+        }
+        
+        label {
+            font-size: 1.4rem;
+            padding: 2.7rem 0;
+            line-height: 1.42;
+            color: rgba(255,255,255, 0.8);
+        }
+    }
+
+
+    .cips {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        gap: 1.6rem;
+        margin-right: 4rem;
+
+        .chips {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            
+            .chover {
+                font-size: 1.2rem;
+            }
+
+            .logo-holder-btn {
+                width: 2rem;
+                height: 2rem;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+    .auth {
+        display: inline-flex;
+        color: white;
+        gap: 1rem;
+        align-items: center;
+
+        &-text {
+            font-size: 1.4rem;
+        }
+
+        &-img {
+            width: 1.8rem;
+            height: 1.8rem;
+            
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+
+    @media (max-width: $tablet) {
+
+        .logo-holder {
+            margin-right: 0.6rem;
+            height: 3rem;
+        }
+
+        .tab {
+            gap: 1rem;
+            label {
+                font-size: 1.2rem;
+                line-height: 1.5;
+            }
+        }
+
+        .cips {
+            gap: 0.8rem;
+            margin-right: 1.6rem;
+
+            .chips {
+                .logo-holder-btn {
+                    width: 1.8rem;
+                    height: 1.8rem;
+                }
+            }
+
+        }
+
+        .auth {
+            &-text {
+                display: none;
+            }
+        }
+    }
+
+
+    @media (max-width: $phone) {
+        padding: 0.8rem 1.2rem;
+        .logo-holder {
+            max-height: 2.2rem;
+            align-items: center;
+            .logo-dt-tb {
+                display: none;
+            }
+
+            .logo-ph {
+                display: unset;
+                object-fit: cover;
+            }
+        }
+
+        .tab {
+            display: none;
+        }
+
+        .cips {
+            display: none;
+        }
+
+        .auth {
+            margin-left: auto;
+            margin-right: 3.2rem;
+
+            &-text {
+                display: block;
+            }
+           
+        }
+
+        .burger-menu {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+
+.header-cont2 {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+
+    .menu-desktop {
+        padding: 1.6rem 0;
+    }
+
+    .menu-tablet {
+        display: none;
+    }
+
+    .search-img {
+        margin-left: auto;
+        max-width: 1.8rem;
+        max-height: 1.8rem;
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    @media (max-width: $tablet) {
+
+        .menu-desktop {
+            display: none;
+        }
+
+        .menu-tablet {
+            padding: 1.6rem 0;
+            display: block;
+        }
+    }
+
+    @media (max-width: $phone) {
+        display: none;
+    }
+}
+
+
+// main
+
+.cluster-cont-info {
+    min-height: 650px;
+    padding: 6rem;
+    position: relative;
+    border-radius: 6rem 6rem 0 0;
+    background: linear-gradient(
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0)
+    );
+    box-sizing: content-box;
+
+
+    .img-holder {
+        position: absolute;
+        left: -3.5rem;
+        bottom: -1.8rem;
+        
+        .desktop {
+            width: 105%;
+        }
+
+        .tablet, .phone{
+            display: none;
+        }
+    }
+
+    .information {
+        position: relative;
+        max-width: 600px;
+        
+        h1 {
+            font-size: 6.4rem;
+            margin-bottom: 1.6rem;
+        }
+        
+        &-text {
+            font-size: 1.6rem;
+            margin-bottom: 4rem;
+        }
+
+
+        .btn-holder {
+            display: flex;
+            gap: 1.2rem;
+        }
+
+        // @media (max-width: $text-resizer) {
+        //     max-width: 450px;
+        //     h1 {
+        //         font-size: 4.8rem;
+        //     }
+
+        //     &-text {
+        //         font-size: 1.4rem;
+        //     }
+        // }
+    }
+
+    @media (max-width: $tablet) {
+        min-height: 450px;
+
+        .img-holder {
+            bottom: -2.8rem;
+            left: unset;
+            right: -3rem;
+
+            .desktop{
+                display: none;
+            }
+            
+            .tablet {
+                display: unset;
+                width: 100%;
+            }
+        }
+
+        .information {
+            max-width: 350px;
+
+            h1 {
+                font-size: 3.6rem;
+                margin-bottom: 1.2rem;
+            }
+
+            &-text {
+                margin-bottom: 3.2rem;
+            }
+
+            .btn-holder {
+                flex-direction: column;
+                max-width: 300px;
+
+                .btn-blue {
+                    display: unset;
+                    text-align: center;
+                    padding: 1.2rem 2.4rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $phone) {
+        min-height: 600px;
+        .img-holder {
+            right: 3rem;
+            bottom: 0rem;
+            .tablet {
+                display: none;
+            }
+            
+            .phone {
+                display: block;
+                max-width: 100%;
+            }
+        }
+
+        .information {
+            margin-inline: auto;
+            max-width: 300px;
+
+            h1 {
+                font-size: 2.4rem;
+            }
+        }
+    }
+}
+
+
+
+.cluster-cont1 {
+    display: flex;
+
+    .cluster-card {
+        margin-right: 4rem;
+        border: 1px solid rgba(19, 139, 225, 0.2);
+        border-radius: 3.2rem;
+        padding: 3.2rem;
+        background: linear-gradient(to top, 
+                rgba(19, 139, 225, 0.2), 
+                rgba(19, 139, 225, 0.04));
+
+        &-text {
+            h2 {
+                font-size: 3.2rem;
+            }
+        }
+
+        .img-holder {
+            img {
+                object-fit: cover;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .tm-about {
+        padding-top: 2.4rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        &-frame {
+            flex: 1;
+            min-width: 50%;
+        }
+    }
+}
