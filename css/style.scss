@@ -53,9 +53,11 @@ h1, h2, h3 {
 .cluster-headline {
     font-size: 4.8rem;
     font-weight: 500;
+    line-height: 1.0833;
 
     @media (max-width: $tablet) {
         font-size: 3.2rem;
+        line-height: 1.25;
     }
 
     @media (max-width: $phone) {
@@ -156,7 +158,8 @@ body {
 
 
 .btn-blue {
-    display: inline-flex;
+    display: inline-block;
+    align-self: center;
     text-decoration: none;
     padding: 16px 24px;
     border: 1px solid rgba(19, 139, 225, 0.4);
@@ -164,9 +167,11 @@ body {
     color: rgba(19, 139, 225, 1);
     font-weight: 500;
     font-size: 1.6rem;
+    line-height: 1.5;
 }
 
 .cont-btn {
+    display: inline-block;
     font-weight: 500;
     padding: 1.2rem 2.4rem;
     background: linear-gradient(to right,
@@ -182,15 +187,25 @@ body {
     border-radius: 0.8rem;
     background-color: rgba(19, 139, 225, 0.18);
     color: rgba(19, 139, 225, 1);
-    padding: 0.8rem 1rem;
+    padding: 0.8rem 1.2rem;
     font-size: 1.4rem;
     font-weight: 500;
+    line-height: 1.2;
     margin-bottom: 2.4rem;
 
 
     @media (max-width: $tablet) {
         font-size: 1.2rem;
         margin-bottom: 1.6rem;
+        padding: 0.8rem 1rem;
+    }
+
+    @media (max-width: $phone) {
+        letter-spacing: 0.1rem;
+        border-radius: 0.4rem;
+        font-size: 1.1rem;
+        padding: 0.55rem 0.8rem;
+        line-height: 1.15;
     }
 }
 
@@ -226,8 +241,9 @@ body {
 
     .logo-holder {
         margin-right: 2rem;
+        height: 4rem;
 
-        .logo-dt-tb {
+       .logo-dt-tb {
             width: 100%;
             height: 100%;
         }
@@ -263,8 +279,8 @@ body {
         
         label {
             font-size: 1.4rem;
-            padding: 2.7rem 0;
-            line-height: 1.42;
+            padding: 2.7rem 0 2.3rem 0;
+            line-height: 1.43;
             color: rgba(255,255,255, 0.8);
         }
     }
@@ -596,6 +612,7 @@ body {
 
             .cluster-headline {
                 font-size: 3.2rem;
+                line-height: 1.25;
             }
 
         }
@@ -982,6 +999,15 @@ body {
                 font-weight: 500;
                 font-size: 1.8rem;
                 margin-bottom: 0.8rem;
+                display: inline-flex;
+                    gap: 0.8rem;
+                    align-items: center;
+                    
+                    .popup-info {
+                        max-width: 2.4rem;
+                        max-height: 2.4rem;
+                    }
+
             }
         }
     }
@@ -1167,11 +1193,6 @@ body {
                 right: 10rem;
             }
 
-            .tower {
-                
-        
-            }
-        
             .imsc-img {
                 right: 10rem;
                 bottom: -5rem;
@@ -1181,29 +1202,192 @@ body {
                 min-height: 350px;
             }
 
+            
+            }
+
+        }
+    }
+
+
+
+
+.cluster-cont4 {
+    display: flex;
+    position: relative;
+    height: 700px;
+    
+    &-area{
+        align-self: center;
+        margin: 0 auto;
+        text-align: center;
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3.2rem;
+            
+            &-description {
+                max-width: 600px;
+                line-height: 1.5;
+                align-self: center;
+            }
+
+            .cluster-headline {
+                max-width: 900px;
+                margin-bottom: 1.6rem;
+            }
+        }
+
+        &-btn {
+            display: flex;
+            gap: 1.2rem;
+            justify-content: center;
+
+            .changes {
+                padding: 1.2rem 2.4rem;
+            }
+        }
+    }
+
+
+    .notes-img {
+        position: absolute;
+        top: 3.6rem;
+        left: 7rem;
+    }
+
+    .hands-img {
+        position: absolute;
+        top: 5.3rem;
+        right: 3.4rem;
+    }
+
+    .rocket-img {
+        position: absolute;
+        bottom: 7.8rem;
+        left: 7rem;
+    }
+
+    .coins-img {
+        position: absolute;
+        bottom: 12.8rem;
+        right: 6.5rem;
+    }
+
+    @media (max-width: $tablet) {
+        max-height: 500px;
+
+        &-area {
+            max-width: 550px;
+            
+            .text {
+                margin-bottom: 2.4rem;
+
+                .cluster-headline {
+                    margin-bottom: 1.2rem;
+                }
+            }
+        }
+        
+        .notes-img {
+            position: absolute;
+            top: 3.3rem;
+            left: 0.1rem;
+            max-width: 147px;
+
+            img {
+                width: 100%;
+            }
+        }
+    
+        .hands-img {
+            position: absolute;
+            top: 4.4rem;
+            right: 1.6rem;
+            max-width: 122px;
+
+            img {
+                width: 100%;
+            }
+        }
+    
+        .rocket-img {
+            position: absolute;
+            bottom: 4.1rem;
+            left: 2.1rem;
+            max-width: 84px;
+
+            img {
+                width: 100%;
+            }
+        }
+    
+        .coins-img {
+            position: absolute;
+            bottom: 3.5rem;
+            right: 1.1rem;
+            max-width: 110px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+    @media (max-width: $phone) {
+
+        &-area {
+            max-width: 335px;
+
+            .text {
+                margin-bottom: 1.2rem;
+
+                &-description {
+                    max-width: 330px;
+                }
+            }
+
+            &-btn {
+                flex-direction: column;
+                gap: 1.2rem;
+                
+                .btn-blue {
+                    min-width: 100%;
+                    padding: 1.1rem 2.4rem;
+                }
+            }
+        }
+
+        .notes-img {
+            top: 0.7rem;
+            left: 5.2rem;
+            max-width: 109px;
+            transform: rotate(3deg);
+        }
+    
+        .hands-img {
+            top: 1.6rem;
+            right: 5.8rem;
+            max-width: 85px;
+        }
+    
+        .rocket-img {
+            display: none;
+        }
+    
+        .coins-img {
+            display: none;
+            }
         }
     }
 }
 
 
 
-.cluster-cont4 {
-    
-    &-area{
-        text-align: center;
-
-        .cluster-headline {
-            line-height: 1.083;
-        }
-
-        .text {
-            margin-bottom: 3.2rem;
-            
-            &-description {
-                line-height: 1.5;
-                margin: 0 auto;
-            }
-        }
-
-    }
+.cluster-cont5 {
+    padding: 4rem;
+    border: 1px solid rgba(37, 170, 245, 0.5);
+    border-radius: 4.8rem;
+    background: linear-gradient(to bottom,
+    rgba(189, 229, 252, 1),
+    rgba(37, 170, 245, 0.5));
 }
