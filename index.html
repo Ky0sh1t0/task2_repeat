@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
-        <div class="underline">
+    <header class="tm-header">
+        <div class="header-underline">
             <div class="tm-width">
                 <div class="header-cont1">
-                    <div class="logo-holder">
+                    <div class="header-logo">
                         <img class="logo-dt-tb" src="./images/logo.svg" alt="">
                         <img class="logo-ph" src="./images/icons/logo_phone.svg" alt="">
                     </div>
-                    <div class="tab">
+                    <div class="header-tab">
                         <input id="organization" type="radio" name="tab-btn" value="organization" checked>
                         <label for="organization">Организациям и ИП</label>
                         <div class="devider"></div>
@@ -23,7 +23,7 @@
                         <label for="individual">Физическим лицам</label>
                     </div>
 
-                    <div class="cips">
+                    <div class="header-cips">
                         <a class="chips btn" href="#">Кластер «Ломоносов»</a>
 
                         <a class="chips btn" href="#">
@@ -36,14 +36,14 @@
                             </div>
                         </a>
                     </div>
-                    <div class="auth">
-                        <div class="auth-text">Авторизация</div>
-                        <div class="auth-img">
+                    <a class="header-auth">
+                        <div class="header-auth-text">Авторизация</div>
+                        <div class="header-auth-img">
                             <img src="./images/user.svg" alt="">
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="burger-menu">
+                    <div class="header-burger-menu">
                         <img src="./images/icons/burger_menu.svg" alt="">
                     </div>
                 </div>
@@ -80,7 +80,7 @@
     <main class="tm-width">
 
         <div class="cluster-cont-info mb-6">
-            <div class="img-holder">
+            <div class="cont-info-img">
                 <img class="desktop" src="./images/cluster_1.svg" alt="">
                 <img class="tablet" src="./images/cluster_tablet_1.svg" alt="">
                 <img class="phone" src="./images/cluster_phone_1.svg" alt="">
@@ -90,7 +90,7 @@
                 <div class="information-text">Помощник в поиске технологических партнеров и создании кооперации
                     Точка входа к государственным и корпоративным заказчикам</div>
                     
-                <div class="btn-holder">
+                <div class="cont-info-btn">
                     <a class="btn-blue">Технологическим компаниям</a>
                     <a class="btn-blue">Заказчикам</a>
                 </div>
@@ -104,14 +104,15 @@
                         <div class="global-tag-line desktop">ОБ ОТРАСЛЕВЫХ КЛАСТЕРАХ</div>
                         <div class="global-tag-line phone">ПОДДЕРЖКА</div>
                         <div class="text-description">
-                            <div class="cluster-headline">Помощники впоиске технологических партнёров исоздании кооперации</div>
-                            <div class="div-text">Компании получают поддержку дляразвития
-                                имасштабирования своих продуктов, азаказчики— экономят время исредства
-                                наскаутинг передовых технологий
+                            <h2 class="cluster-headline">Помощники в поиске технологических партнёров
+                                и создании кооперации</h2>
+                            <div class="div-text">Компании получают поддержку для развития
+                                и масштабирования своих продуктов, а заказчики — экономят время и средства
+                                на скаутинг передовых технологий
                             </div>
                         </div>
                     </div>
-                    <div class="img-holder">
+                    <div class="cont1-img">
                         <img src="./images/Group.svg" alt="">
                     </div>
               </div>
@@ -186,12 +187,12 @@
          <div class="cluster-cont2 mb-6">
             <div class="cluster-cont2-header mb-4">
                 <div class="global-tag-line">КЛАСТЕРЫ</div>
-                <div class="cluster-headline">Вы можете присоединиться</div> 
+                <h2 class="cluster-headline">Вы можете присоединиться</h2> 
             </div>
 
             <div class="cluster-cont2-cardholder mb-4">
                 <div class="cluster-card">
-                    <div class="img-holder">
+                    <div class="cont2-img">
                         <img src="./images/biofarmandMedTech.svg" alt="">
                     </div>
                     <div class="cluster-card-name">Биофармацевтика и медицинские технологии</div>
@@ -211,7 +212,7 @@
                 </div>
 
                 <div class="cluster-card">
-                    <div class="img-holder">
+                    <div class="cont2-img">
                         <img src="./images/biofarmandMedTech.svg" alt="">
                     </div>
                     <div class="cluster-card-name">Биофармацевтика и медицинские технологии</div>
@@ -231,7 +232,7 @@
                 </div>
 
                 <div class="cluster-card">
-                    <div class="img-holder">
+                    <div class="cont2-img">
                         <img src="./images/biofarmandMedTech.svg" alt="">
                     </div>
                     <div class="cluster-card-name">Биофармацевтика</div>
@@ -251,7 +252,7 @@
                 </div>
 
                 <div class="cluster-card">
-                    <div class="img-holder">
+                    <div class="cont2-img">
                         <img src="./images/biofarmandMedTech.svg" alt="">
                     </div>
                     <div class="cluster-card-name">Биофармацевтика</div>
@@ -277,7 +278,7 @@
          <div class="cluster-cont3 mb-6">
             <div class="cluster-cont3-header mb-4">
                 <div class="global-tag-line">ПРЕИМУЩЕТСВА</div>
-                <div class="cluster-headline">Отраслевые кластеры</div>
+                <h2 class="cluster-headline">Отраслевые кластеры</h2>
 
                 <div class="switch-block">
                     <label for="toggle-btn" class="switch-block-text">для техкомпаний</label>
@@ -304,7 +305,8 @@
                     </div>
                     <div class="cluster-grid-text">
                         <div class="cluster-grid-text-high">Технологические конкурсы</div>
-                        <div class="cluster-grid-text-low">участие втехнологических конкурсах дляразработки инновационных решений винтересах корпораций игорода</div>
+                        <div class="cluster-grid-text-low">участие в технологических конкурсах для разработки 
+                            инновационных решений в интересах корпораций игорода</div>
                     </div>
                     <div class="finance-img">
                         <img src="./images/finance_img.svg" alt="">
@@ -412,12 +414,11 @@
 
         <div class="cluster-cont4 mb-6">
             <div class="cluster-cont4-area">
-                <div class="global-tag-line">УСЛОВИЯ</div>
-                <div class="text">
-                    <div class="cluster-headline">Разрабатываете инновационное решение или продукт?</div>
-                    <div class="text-description">Окажем поддержку в поиске комплектующих, разработке,
-                        кооперации и внедрении инновационных решений и продуктов!</div>
-                </div>
+                <div class="global-tag-line">УСЛОВИЯ</div>    
+                <h2 class="cluster-headline">Разрабатываете инновационное решение или продукт?</h2>
+                <div class="text-description">Окажем поддержку в поиске комплектующих, разработке,
+                    кооперации и внедрении инновационных решений и продуктов!</div>
+                
                 <div class="cluster-cont4-area-btn">
                     <a class="btn-blue" href="">Найти заказчика</a>
                     <a class="btn-blue changes" href="">Найти бизнес-партнера</a>
@@ -445,7 +446,7 @@
         <div class="cluster-cont5 mb-6">
             <div class="global-tag-line">АКТУАЛЬНОСТЬ</div>
             <div class="cluster-cont5-text">
-                <div class="cluster-headline">Запросы от города и бизнеса</div>
+                <h2 class="cluster-headline">Запросы от города и бизнеса</h2>
                 <div class="div-text">Отраслевые кластеры 
                     - это связующее звено между стартапами,
                      технологическими компаниями, бизнесом и городом.
@@ -453,45 +454,151 @@
                        решения в интересах крупных заказчиков</div>
                 <div class="cont-btn">Рассказать о решении</div>
             </div>
-
+            
+            <div class="cont5-img">
+                <img src="./images/PR_and_improve.svg" alt=""> <!-- absolute -->   
+            </div>
+            <div class="div-tit">Актуальные запросы</div>
+            
             <div class="cluster-cont5-content">
-                <img src="" alt=""> <!-- absolute -->
-                <div>Актуальные запросы</div>
                 <div class="content1">
-                    <div class="content1-text">
-                        <div class="content-text-headline">Дистанционный мониторинг здоровья</div>
-                        <div class="content-text-dscr">Персональные медицинские устройства, 
-                            осуществляющее дистанционный мониторинг состояния здоровья</div>
-                    </div>
+                    <div class="content1-headline">Дистанционный мониторинг здоровья</div>
+                    <div class="content1-description">Персональные медицинские устройства, 
+                        осуществляющее дистанционный мониторинг состояния здоровья</div>
                     <div class="content1-btn">
-                        <div class="">
-                            <img class="logo" src="" alt="">
+                        <div class="logo-text">
+                            <img class="logo" src="./images/icons/Logo_ingoverment.svg" alt="">
                             <div class="div-text">Ингосстрах</div>
-                            <img class="img-btn" src="" alt="">
                         </div>
+                        <img class="img-btn" src="./images/icons/Button_Icon_Primary.svg" alt="">
                     </div>
                 </div> 
                 <div class="content1">
-                    <div class="content1-text">
-                        <div class="content-text-headline">Дистанционный мониторинг здоровья</div>
-                        <div class="content-text-dscr">Персональные медицинские устройства, 
-                            осуществляющее дистанционный мониторинг состояния здоровья</div>
+                    <div class="content1-headline">ИТ-решения с использованием ИИ для выявления заболеваний</div>
+                    <div class="content1-description">ИТ-решения с
+                         использованием ИИ для автоматического выявления
+                         подозрений на заболевания, формирования комплексной оценки рисков 
+                         пациента и разработки индивидуального плана лечения, а также снижения врачебных ошибок
                     </div>
+                    
                     <div class="content1-btn">
-                        <div class="">
-                            <img class="logo" src="" alt="">
+                        <div class="logo-text">
+                            <img class="logo" src="./images/icons/Logo_ingoverment.svg" alt="">
                             <div class="div-text">Ингосстрах</div>
-                            <img class="img-btn" src="" alt=""> <!-- Вынести в глобальную -->
                         </div>
+                        <img class="img-btn" src="./images/icons/Button_Icon_Primary.svg" alt=""> <!-- Вынести в глобальную -->
                     </div>
                 </div>
                 <div class="content2">
-                    <img src="" alt=""> <!--absolute-->
+                    <div class="cont5-img">
+                        <img src="./images/chat_msg.svg" alt=""> <!--absolute-->
+                    </div>
                     <div class="content2-text">Все актуальные запросы для отраслевых кластеров</div>
-                    <a class="content-btn">Перейти</a>
+                    <div class="content2-text-table content2-text">Все инновационные решения участников</div>
+                    <a class="content2-btn">Перейти</a>
                 </div>
             </div>
         </div>
+
+        <div class="cluster-cont6 mb-6">
+            <div class="global-tag-line">РАЗВИТИЕ</div>
+            <h2 class="cluster-headline">Меры поддержки для участников отраслевых кластеров</h2>
+            
+            <div class="cluster-cont6-content mb-4">
+                <div class="grant">
+                    <div class="grant-img">
+                        <img src="./images/grant_pilot.svg" alt="">
+                    </div>
+                    <div class="grant-text">
+                        <div class="text-headline">Грант на пилотирование до 4 млн ₽</div>
+                        <div class="grant-text-description">Грант на проведение пилотных тестирований инновационных
+                             решений на базе городской инфраструктуры. Для участников отраслевых кластеров
+                              максимальная сумма гранта увеличена до 4 млн ₽</div>
+                        <a class="grant-btn">Подать заявку</a>
+                    </div>
+                </div>
+
+                <div class="grant">
+                    <div class="grant-img">
+                        <img src="./images/grant_forbuy.svg" alt="">
+                    </div>
+                    <div class="grant-text">
+                        <div class="text-headline">Грант на приобретение оборудования</div>
+                        <div class="grant-text-description">Грант на приобретение оборудования 
+                            и развитие деятельности</div>
+                        <a class="grant-btn">Подать заявку</a>
+                    </div>
+                </div>
+
+                <div class="grant">
+                    <div class="grant-img">
+                        <img src="./images/grant_patent.svg" alt="">
+                    </div>
+                    <div class="grant-text">
+                        <div class="text-headline">Грант на патентование в РФ</div>
+                        <div class="grant-text-description">Грант на патентование изобретений
+                            и полезных моделей в Российской Федерации</div>
+                        <a class="grant-btn">Подать заявку</a>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-wrapper">
+                <a class="cont-btn">Ещё меры поддержки</a>
+            </div>
+        </div>
+
+        <div class="cluster-cont7 mb-6">
+            <div class="global-tag-line">ИСТОРИИ УСПЕХА</div>
+            <h2 class="cluster-headline mb-4">Кейсы участников отраслевых кластеров</h2>
+
+            <div class="cont7-grid">
+                <div class="cont7-grid-1">
+                    <div class="cont7-grid-1-firstblock">
+                        <div class="customer-text">Заказчик</div>
+                        <div class="company-text">НК &#171;Роснефть&#187;</div>
+                        <div class="money-text">119 млн &#8381;</div>
+                        <div class="deal-text">Сумма сделки</div>
+                        <div class="global-tag-line">Кластер &#171;Ломоносов&#187;</div>
+                    </div>
+                    <div class="cont7-grid-1-secondblock">
+                        <img src="" alt="">
+                        <div>ООО «Ромашка» разработала новое программное обеспечение</div>
+                        <div>ООО «Ромашка» совместно с ООО «Василёк» разработала
+                             новое программное обеспечение для нефтеперерабатывающей отрасли, 
+                             позволяющее снизить потери при добыче нефти до 20%.</div>
+                        <div class="cont-btn">Подробнее</div>
+                    </div>
+                </div>
+                <div class="cont7-grid-2 card-round">
+                    <div class="customer-text">Заказчик</div>
+                    <div class="company-text">НК &#171;Роснефть&#187;</div>
+                    <div class="money-text">119 млн &#8381;</div>
+                    <div class="deal-text">Сумма сделки</div>
+                    <div class="global-tag-line">Кластер &#171;Ломоносов&#187;</div>
+                </div>
+                <div class=" cont7-grid-3 card-round">
+                    <div class="customer-text">Заказчик</div>
+                    <div class="company-text">НК &#171;Роснефть&#187;</div>
+                    <div class="money-text">119 млн &#8381;</div>
+                    <div class="deal-text">Сумма сделки</div>
+                    <div class="global-tag-line">Кластер &#171;Ломоносов&#187;</div>
+                </div>
+                <div class=" cont7-grid-4 card-round">
+                    <div class="customer-text">Заказчик</div>
+                        <div class="company-text">НК &#171;Роснефть&#187;</div>
+                        <div class="money-text">119 млн &#8381;</div>
+                        <div class="deal-text">Сумма сделки</div>
+                        <div class="global-tag-line">Кластер &#171;Ломоносов&#187;</div>
+                </div>
+                <div class=" cont7-grid-5 card-round">
+                    <div class="customer-text">Заказчик</div>
+                    <div class="company-text">НК &#171;Роснефть&#187;</div>
+                    <div class="money-text">119 млн &#8381;</div>
+                    <div class="deal-text">Сумма сделки</div>
+                    <div class="global-tag-line">Кластер &#171;Ломоносов&#187;</div>
+                </div>
+            </div>
+        </div?>
     </main>
 </body>
 </html>
